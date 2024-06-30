@@ -6,42 +6,6 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 '''
 
-'''1. Reverse the linked lists:
-   - Reverse the order of nodes in both linked lists.
-   - This step aligns the digits from the least significant to the most significant.
-   - Reversing the lists allows for easier addition starting from the least significant digit.
-
-2. Initialize the carry and sum:
-   - Set the initial value of the carry to 0.
-   - Create a dummy node to store the sum of the two numbers.
-   - Initialize a pointer (e.g., `current`) to the dummy node.
-
-3. Add the values of the nodes within a loop:
-   - Traverse both reversed linked lists simultaneously.
-   - For each iteration:
-     - Get the values of the current nodes from both lists (if available, otherwise consider 0).
-     - Add the values along with the carry.
-     - Calculate the new carry and sum.
-       - Carry = (value1 + value2 + previous_carry) // 10
-       - Sum = (value1 + value2 + previous_carry) % 10
-     - Create a new node with the sum as its value.
-     - Append the new node to the result linked list.
-     - Move the pointers to the next nodes in both lists.
-
-4. Handle the remaining carry:
-   - After the loop ends, check if there is any remaining carry.
-   - If the carry is greater than 0, create a new node with the carry as its value.
-   - Append the carry node to the result linked list.
-
-5. Reverse the result linked list:
-   - The result linked list currently represents the sum in reverse order.
-   - Reverse the order of nodes in the result linked list.
-   - This step ensures that the most significant digit is at the beginning of the linked list.
-
-6. Return the result linked list:
-   - The reversed result linked list represents the sum of the two numbers.
-   - Return the head of the result linked list.'''
-
 # Define a ListNode class to represent each node in the linked list
 class ListNode:
     def __init__(self, val):
